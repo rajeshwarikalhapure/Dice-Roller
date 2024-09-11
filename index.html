@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dice Roller</title>
+</head>
+<body>
+    <style>
+        .img {
+            height: 300px;
+            display: block;
+          margin: auto;
+          margin-top: 150px;
+        
+        }
+        .btn{
+            border-radius: 4px;
+            cursor: pointer;
+            margin: auto;
+         margin-left: 750px;
+        margin-top: 100px;
+        }
+    </style>
+    <img src="dice.png " class="img" id="img">
+    <button type="button" class="btn" id="btn" onclick="change()">Roll</button>
+
+    <script>
+        function change() {
+            const img = document.getElementById("img");
+            const num = Math.floor(Math.random()*(7 - 1)) + 1;
+             num==num? img.src = `${num}.png`:img.src = `${num}.png`
+        }
+               
+    </script>
+</body>
+
+</html>
